@@ -8,3 +8,4 @@ config-pin
 *.mod.c
 modules.order
 Module.symvers
+#*#

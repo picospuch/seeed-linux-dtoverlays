@@ -1,0 +1,23 @@
+
+/*
+ * Device tree overlay for user led
+ */
+
+
+#include "dt-bindings/gpio/gpio.h"
+#include "dt-bindings/pinctrl/stm32-pinfunc.h"
+
+/dts-v1/;
+/plugin/;
+
+/ {
+    fragment@0 {
+        target-path = "/";
+        __overlay__ {
+		  led {
+            status = "disabled";
+          };
+        };
+    };
+};
+

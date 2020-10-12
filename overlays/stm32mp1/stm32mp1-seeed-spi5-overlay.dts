@@ -60,7 +60,7 @@
                         spi0channel@0{
                                 #address-cells = <1>;
                                 #size-cells = <0>;
-                                compatible = "rohm,dh2228fv","spidev";
+                                compatible = "spidev";
                                 reg = <0>;
                                 spi-max-frequency = <20000000>;
                         };                      
