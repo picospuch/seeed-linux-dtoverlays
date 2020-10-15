@@ -1,0 +1,2 @@
+# pip3 install luma.oled luma.example
+./demo.py -i spi -d ssd1306 --gpio-reset 14 --gpio-data-command 3

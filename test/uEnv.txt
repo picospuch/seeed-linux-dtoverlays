@@ -1,0 +1,46 @@
+#Docs: http://elinux.org/Beagleboard:U-boot_partitioning_layout_2.0
+
+uname_r=4.19.9-stm32-r1
+#uuid=
+dtb=stm32mp1-seeed-npi-full.dtb
+
+###U-Boot Overlays###
+###Documentation: http://elinux.org/Beagleboard:BeagleBoneBlack_Debian#U-Boot_Overlays
+###Master Enable
+enable_uboot_overlays=1
+###
+###custom overlays
+#uboot_overlay_addr0=/lib/firmware/<file0>.dtbo
+#uboot_overlay_addr1=/lib/firmware/<file1>.dtbo
+#uboot_overlay_addr2=/lib/firmware/<file2>.dtbo
+#uboot_overlay_addr3=/lib/firmware/<file3>.dtbo
+#uboot_overlay_addr4=/lib/firmware/<file4>.dtbo
+#uboot_overlay_addr5=/lib/firmware/<file5>.dtbo
+#uboot_overlay_addr6=/lib/firmware/<file6>.dtbo
+#uboot_overlay_addr7=/lib/firmware/<file7>.dtbo
+###
+###U-Boot fdt tweaks... (60000 = 384KB)
+#uboot_fdt_buffer=0x60000
+###U-Boot Overlays###
+
+cmdline=coherent_pool=1M net.ifnames=0 quiet
+
+#In the event of edid real failures, uncomment this next line:
+#cmdline=coherent_pool=1M net.ifnames=0 quiet video=HDMI-A-1:1024x768@60e
+
+#Use an overlayfs on top of a read-only root filesystem:
+#cmdline=coherent_pool=1M net.ifnames=0 quiet overlayroot=tmpfs
+
+##enable Generic eMMC Flasher:
+##make sure, these tools are installed: dosfstools rsync
+#cmdline=init=/opt/scripts/tools/eMMC/init-eMMC-flasher-v3-stm32mp1.sh
+
+
+# specify kernel eth0 mac address
+ethaddr=de:ab:35:d6:2b:f3
+
+uboot_overlay_addr1=/lib/firmware/stm32mp1-seeed-spi5-overlay.dtbo
+uboot_overlay_addr2=/lib/firmware/stm32mp1-seeed-usart2-overlay.dtbo
+uboot_overlay_addr3=/lib/firmware/stm32mp1-seeed-i2c4-overlay.dtbo
+uboot_overlay_addr4=/lib/firmware/stm32mp1-seeed-userled-overlay.dtbo
+

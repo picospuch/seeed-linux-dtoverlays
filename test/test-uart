@@ -1,0 +1,1 @@
+while true; do echo "from npi, at `date`" > /dev/ttySTM2; sleep 1; done;
