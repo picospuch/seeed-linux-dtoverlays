@@ -11,6 +11,10 @@ user0-carrier gpio-i1
 user1-carrier gpio-h15
 user2-carrier gpio-i0
 
+Step 1: make
+./test/build
+
+Step 2: add
 add uboot_overlay_addr4=/lib/firmware/stm32mp1-seeed-userled-overlay.dtbo to your uEnv.txt.
 
 Overlays:
