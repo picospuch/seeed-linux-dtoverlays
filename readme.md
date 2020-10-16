@@ -3,6 +3,15 @@
 On embedded systems, the [Device Tree](https://elinux.org/Device_Tree_What_It_Is) helps the kernel understand various peripherals that are connected to the board and how to initialize them. These hardware might be things like LDO regulators, various controllers, GPIO, etc which are generic, but yet needs certain configuration that should not be hard-coded into the kernel. To understand more about device trees I recommend you start with the Raspberry Pi [documentation on this topic](https://www.raspberrypi.org/documentation/configuration/device-tree.md). There are more links at the end of this article.
 
 
+LED resource on the board
+-------------------------
+
+blue-som gpio-g3
+user0-carrier gpio-i1
+user1-carrier gpio-h15
+user2-carrier gpio-i0
+
+add uboot_overlay_addr4=/lib/firmware/stm32mp1-seeed-userled-overlay.dtbo to your uEnv.txt.
 
 Overlays:
 ------------
